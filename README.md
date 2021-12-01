@@ -97,8 +97,8 @@ Por favor descarga el archivo Region.lua, sin él el tema no va a funcionar.
 
 # NOTES / NOTAS
 
-1) GrooveRadar with DDR A songs won't appear, this happens because the GrooveRadar is still in progress with DDR A Songs
-1) El GrooveRadar con las canciones del DDR A no va a aparecer, sigue en proceso de hacer el GrooveRadar para estas canciones
+• GrooveRadar with DDR A songs won't appear, this happens because the GrooveRadar is still in progress with DDR A Songs
+• El GrooveRadar con las canciones del DDR A no va a aparecer, sigue en proceso de hacer el GrooveRadar para estas canciones
 
-2) PLEASE ACTIVATE THE OPTION "SelectStage" to see the DanceStages, there is an unknown bug when you don't turn on this option for the first time. You can turn it off later
-2) ACTIVA LA OPCIÓN "SelectStage" para tener los DanceStages, hay un bug raro que no te permite ver los stages si no lo activas por primera vez, luego ya lo puedes desactivar.
+• PLEASE ACTIVATE THE OPTION "SelectStage" to see the DanceStages, there is an unknown bug when you don't turn on this option for the first time. You can turn it off later
+• ACTIVA LA OPCIÓN "SelectStage" para tener los DanceStages, hay un bug raro que no te permite ver los stages si no lo activas por primera vez, luego ya lo puedes desactivar.
