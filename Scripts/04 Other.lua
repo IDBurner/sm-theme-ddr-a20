@@ -55,58 +55,27 @@ function SameDiffSteps(song, pn)
 	end;
 end;
 
-function Model()
-	if GetUserPref("OptionRowModel")=='BLUE' then
-		return "blue_"
-	else
-		return "gold_"
-	end
-end
-
 ddrgame = "gold_"
 function ChangeGame()
-	local ddrgame;
-	if Model() == "blue_" then
+	if GetUserPref("OptionRowModel")=='BLUE' then
 		ddrgame = "blue_"
 	else
 		ddrgame = "gold_"
 	end
 end
 
-function Version()
-	if GetUserPref("OptionRowVersion")=='A20 PLUS' then
-		return "A20+_"
-	else
-		return "A20_"
-	end
-end
-
 version = "A20_"
 function ChangeVersion()
-	local version;
-	if Version() == "A20+_" then
+	if GetUserPref("OptionRowVersion")=='A20 PLUS' then
 		version = "A20+_"
 	else
 		version = "A20_"
 	end
 end
 
-function GoldenLeague()
-	if GetUserPref("OptionRowGoldenLeague")=='BRONZE' then
-		return "_brnd"
-	elseif GetUserPref("OptionRowGoldenLeague")=='SILVER' then
-		return "_silv"
-	elseif GetUserPref("OptionRowGoldenLeague")=='GOLD' then
-		return "_gold"
-	else
-		return "_normal"
-	end
-end
-
 gl = "_normal"
 function ChangeLeague()
-	local gl;
-	if GoldenLeague() == "_brnd" then
+	if GetUserPref("OptionRowGoldenLeague")=='BRONZE' then
 		gl = "_brnd"
 	elseif GetUserPref("OptionRowGoldenLeague")=='SILVER' then
 		gl = "_silv"

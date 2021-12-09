@@ -1,21 +1,29 @@
+function Version()
+	if GetUserPref("OptionRowVersion")=='A20 PLUS' then
+		return "A20 PLUS"
+	else
+		return "A20"
+	end
+end
+
 do
 	--if there isn't music for a specific screen it falls back to common
 	local music = {
 		profile = {
-			["A20_"] = "MenuMusic/profile/A20 Profile (loop).ogg";
-			["A20+_"] = "MenuMusic/profile/A20+ Profile (loop).ogg";
+			["A20"] = "MenuMusic/profile/A20 Profile (loop).ogg";
+			["A20 PLUS"] = "MenuMusic/profile/A20+ Profile (loop).ogg";
 		};
 		selmus = {
-			["A20_"] = "MenuMusic/selmus/A20 Selmus (loop).ogg";
-			["A20+_"] = "MenuMusic/selmus/A20+ Selmus (loop).ogg";
+			["A20"] = "MenuMusic/selmus/A20 Selmus (loop).ogg";
+			["A20 PLUS"] = "MenuMusic/selmus/A20+ Selmus (loop).ogg";
 		};
 		results = {
-			["A20_"] = "MenuMusic/results/A20 Results (loop).ogg";
-			["A20+_"] = "MenuMusic/results/A20+ Results (loop).ogg";
+			["A20"] = "MenuMusic/results/A20 Results (loop).ogg";
+			["A20 PLUS"] = "MenuMusic/results/A20+ Results (loop).ogg";
 		};
 		logout = {
-			["A20_"] = "MenuMusic/logout/A20 Logout (loop).ogg";
-			["A20+_"] = "MenuMusic/logout/A20+ Logout (loop).ogg";
+			["A20"] = "MenuMusic/logout/A20 Logout (loop).ogg";
+			["A20 PLUS"] = "MenuMusic/logout/A20+ Logout (loop).ogg";
 		}
 	}
 	--thanks to this code
