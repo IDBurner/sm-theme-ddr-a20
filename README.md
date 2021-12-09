@@ -8,12 +8,14 @@
 1) BlackScreen during Gameplay
 2) Crash passing ScreenMenu
 3) ScreenSelectMusic BGM 
+4) It won't be necessary change the theme folder's name
 
 
 (ESPAÑOL)
 1) Pantalla Negra durante el juego
 2) Crash pasando la pantalla del menú
 3) Música de fondo del ScreenSelectMusic
+4) No es necesario cambiar el nombre del folder del tema
 
 
 # ENGLISH
