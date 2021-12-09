@@ -248,7 +248,7 @@ local function TestActorScroller()
 					if FILEMAN:DoesFileExist(value:GetCharacterDir().."CharacterInfo.cfg") then
 						self:zoom((tonumber(CharacterInfo("Size",value)))*13)
 					else
-						self:zoom(10)
+						self:zoom(12)
 					end;
 				end,
 			OffCommand=function(s) s:linear(0.2):diffusealpha(0) end,

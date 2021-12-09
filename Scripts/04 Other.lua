@@ -6,37 +6,6 @@ function ThemeManager:GetAbsolutePath(sPath, optional)
 	return sFinPath
 end
 
-gl = "_normal"
-function GoldenLeague()
-	if GetUserPref("OptionRowGoldenLeague")=='OFF' then
-		gl = "_normal"
-	elseif GetUserPref("OptionRowGoldenLeague")=='BRONZE' then
-		gl = "_brnd"
-	elseif GetUserPref("OptionRowGoldenLeague")=='SILVER' then
-		gl = "_silv"
-	elseif GetUserPref("OptionRowGoldenLeague")=='GOLD' then
-		gl = "_gold"
-	end;
-end;
-
-ddrgame = "gold_"
-function ChangeGame()
-		if GetUserPref("OptionRowModel")=='GOLD' then
-		ddrgame = "gold_"
-		else
-		ddrgame = "blue_"
-	end
-end
-
-version = "A20_"
-function ChangeVersion()
-		if GetUserPref("OptionRowVersion")=='A20' then
-		version = "A20_"
-		else
-		version = "A20+_"
-	end
-end
-
 function jacketpath(text, so)
 	if not text or text =="" then
 		return nil
@@ -85,6 +54,131 @@ function SameDiffSteps(song, pn)
 		return song:GetOneSteps(st, diff);
 	end;
 end;
+
+function Model()
+	if GetUserPref("OptionRowModel")=='BLUE' then
+		return "blue_"
+	else
+		return "gold_"
+	end
+end
+
+ddrgame = "gold_"
+function ChangeGame()
+	local ddrgame;
+	if Model() == "blue_" then
+		ddrgame = "blue_"
+	else
+		ddrgame = "gold_"
+	end
+end
+
+function Version()
+	if GetUserPref("OptionRowVersion")=='A20 PLUS' then
+		return "A20+_"
+	else
+		return "A20_"
+	end
+end
+
+version = "A20_"
+function ChangeVersion()
+	local version;
+	if Version() == "A20+_" then
+		version = "A20+_"
+	else
+		version = "A20_"
+	end
+end
+
+function GoldenLeague()
+	if GetUserPref("OptionRowGoldenLeague")=='BRONZE' then
+		return "_brnd"
+	elseif GetUserPref("OptionRowGoldenLeague")=='SILVER' then
+		return "_silv"
+	elseif GetUserPref("OptionRowGoldenLeague")=='GOLD' then
+		return "_gold"
+	else
+		return "_normal"
+	end
+end
+
+gl = "_normal"
+function ChangeLeague()
+	local gl;
+	if GoldenLeague() == "_brnd" then
+		gl = "_brnd"
+	elseif GetUserPref("OptionRowGoldenLeague")=='SILVER' then
+		gl = "_silv"
+	elseif GetUserPref("OptionRowGoldenLeague")=='GOLD' then
+		gl = "_gold"
+	else
+		gl = "_normal"
+	end
+end
+
+function Boom()
+	if GetUserPref("OptionRowBoom")=='2014' then
+		return "(2014)" 
+	else
+		return "(A)"
+	end
+end
+
+function Screen.CharacterSelect()
+	if GetUserPref("OptionRowScreenCharacters")=='ON' then
+		return "ScreenSelectCharacters"
+		
+	else
+		return "ScreenSelectStyle"
+	end
+end
+
+Line = {
+	OptionNumber = function() 
+		if GetUserPref("OptionRowScreenCharacters")=='ON' then
+			if GetUserPref("OptionRowOptionStage")=='ON' then
+				return "1,2,3,4,5,6,7,8,9,10,11,12,13"
+			else
+				return "1,2,3,4,5,6,7,8,9,10,11,12"
+			end;
+		else
+			if GetUserPref("OptionRowOptionStage")=='ON' then
+				return "1,2,3,4,5,6,7,8,9,10,11,12,13,14"
+			else	
+				return "1,2,3,4,5,6,7,8,9,10,11,12,13" 
+			end;
+		end
+	end;
+	
+	LineT = function()
+		if GetUserPref("OptionRowScreenCharacters")=='OFF' and GetUserPref("OptionRowOptionStage")=='OFF' then
+			return "list,Characters"
+		elseif GetUserPref("OptionRowScreenCharacters")=='OFF' and GetUserPref("OptionRowOptionStage")=='ON' then
+			return "list,Characters"
+		elseif GetUserPref("OptionRowScreenCharacters")=='ON' and GetUserPref("OptionRowOptionStage")=='OFF' then
+			return "list,Risky"
+		elseif GetUserPref("OptionRowScreenCharacters")=='ON' and GetUserPref("OptionRowOptionStage")=='ON' then
+			return "lua,OptionRowStage()"
+		else
+			return "list,Characters"
+		end;
+	end;
+	
+	LineP = function()
+		if GetUserPref("OptionRowScreenCharacters")=='OFF' and GetUserPref("OptionRowOptionStage")=='OFF' then
+			return "list,Risky"
+		elseif GetUserPref("OptionRowScreenCharacters")=='OFF' and GetUserPref("OptionRowOptionStage")=='ON' then
+			return "lua,OptionRowStage()"
+		elseif GetUserPref("OptionRowScreenCharacters")=='ON' and GetUserPref("OptionRowOptionStage")=='OFF' then
+			return "list,Risky"
+		elseif GetUserPref("OptionRowScreenCharacters")=='ON' and GetUserPref("OptionRowOptionStage")=='ON' then
+			return "list,Risky"
+		else
+			return "list,Risky"
+		end;
+	end;
+}
 
 -- �W���b�W���x���ݒ�
 function JudgmentTransformCommand( self, params )

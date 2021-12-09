@@ -1115,6 +1115,7 @@ function DanceStageSong()
 		elseif GAMESTATE:GetCurrentSong():GetDisplayFullTitle() == "勇猛無比"															then return "(X) BOOM BOOM BOOM"			--YU-MOU-MU-HI
 		elseif GAMESTATE:GetCurrentSong():GetDisplayFullTitle() == "ユメブキ"															then return "(X2) CYBER"					--Yumebuki
 		elseif GAMESTATE:GetCurrentSong():GetDisplayFullTitle() == "ロキ(w/緒方恵美)"													then return "(X) BOOM BOOM BOOM"			--Roki (Megumi Ogata)
+		elseif GAMESTATE:GetCurrentSong():GetDisplayFullTitle() == "actualization of self (weaponized)"								then return "(X2) BOOM LIGHT"
 		elseif GAMESTATE:GetCurrentSong():GetDisplayFullTitle() == "AI"																then return "(X2) CYBER"
 		elseif GAMESTATE:GetCurrentSong():GetDisplayFullTitle() == "ANTI ANTHEM"													then return Boom().." BOOM YELLOW"
 		elseif GAMESTATE:GetCurrentSong():GetDisplayFullTitle() == "Bang Pad(Werk Mix)"												then return "(X2) CYBER"

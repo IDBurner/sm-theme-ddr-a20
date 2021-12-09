@@ -10,16 +10,16 @@ local t = Def.ActorFrame{
 	LoadActor(THEME:GetPathO("","_/alphaMembers"));
 }
 
---local Music = THEME:GetPathS("","ScreenSelectMusic music (loop).redir")
-local Music = "/Themes/DDR A20/Sounds/ScreenSelectMusic music (loop).redir"
+local Music = THEME:GetAbsolutePath("Sounds/ScreenSelectMusic music (loop).redir")
 local file = RageFileUtil.CreateRageFile()
 
-if GetUserPref("OptionRowVersion")=='A20' then
+	
+if version == "A20_" then
     file:Open(Music,2)
     file:Write("MenuMusic/selmus/A20 Selmus (loop).ogg")
     file:Close()
     file:destroy()
-else
+elseif version == "A20+_" then
 	file:Open(Music,2)
     file:Write("MenuMusic/selmus/A20+ Selmus (loop).ogg")
     file:Close()

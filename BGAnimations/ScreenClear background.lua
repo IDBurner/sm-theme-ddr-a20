@@ -3,7 +3,7 @@ return Def.Actor{
 		ChangeGame()
 		ChangeLanguage()
 		ChangeVersion()
-		GoldenLeague()
+		ChangeLeague()
 		local coins = GAMESTATE:GetCoins()
 			if coins >= 1 then
 				GAMESTATE:InsertCoin(-coins)

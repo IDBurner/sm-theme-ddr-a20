@@ -6302,6 +6302,12 @@ DDR_groove_radar_values= {
 			Medium = {52, 43, 27, 22, 9}, 
 			Hard = {72, 56, 29, 34, 39}, 
 		},
+		["actualization of self (weaponized)"] = {
+			Beginner = {0, 0, 0, 0, 0}, 
+			Easy = {0, 0, 0, 0, 0}, 
+			Medium = {0, 0, 0, 0, 0}, 
+			Hard = {136, 108, 27, 23, 109}, 
+		},
 		["AI"] = {
 			Beginner = {28, 23, 3, 23, 0}, 
 			Easy = {61, 47, 36, 44, 8}, 
