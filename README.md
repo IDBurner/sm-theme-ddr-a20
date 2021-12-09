@@ -2,9 +2,19 @@
 
 # FIXES / REPARACIONES
 
+(ENGLISH)
+
+
 1) BlackScreen during Gameplay
 2) Crash passing ScreenMenu
 3) ScreenSelectMusic BGM 
+
+
+(ESPAÑOL)
+1) Pantalla Negra durante el juego
+2) Crash pasando la pantalla del menú
+3) Música de fondo del ScreenSelectMusic
+
 
 # ENGLISH
 
