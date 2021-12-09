@@ -1,6 +1,6 @@
 # Another Inori's Theme Edit
 
-#FIXES / REPARACIONES
+# FIXES / REPARACIONES
 
 1) BlackScreen during Gameplay
 2) Crash passing ScreenMenu
