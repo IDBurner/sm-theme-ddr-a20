@@ -15,8 +15,6 @@ function(table, ind)
 end
 })
 
-local regionPath = "/Themes/"
-
 --?d?????e????---------------------------
 function LoadCard(cColor,cColor2,Player,IsJoinFrame)
 	local t = Def.ActorFrame {
@@ -89,18 +87,18 @@ function LoadCard(cColor,cColor2,Player,IsJoinFrame)
         self:diffusealpha(0)
       end;
     };
-	LoadActor(regionPath.."Region.lua")..{
-      InitCommand=cmd(diffusealpha,0;zoom,1;x,135;y,-87);
-      OnCommand=function(self)
-        if IsJoinFrame then
-          (cmd(linear,0.3;diffusealpha,0))(self);
-        else
-          self:sleep(0.7):linear(0.1):diffusealpha(1):zoom(1)
-        end
-      end;
-      OffCommand=function(self)
-        self:diffusealpha(0)
-      end;
+	LoadActor(RegionFile())..{
+		InitCommand=cmd(diffusealpha,0;zoom,1;x,135;y,-87);
+		OnCommand=function(self)
+			if IsJoinFrame then
+				self:linear(0.3):diffusealpha(0)
+			else
+				self:sleep(0.7):linear(0.1):diffusealpha(1):zoom(1)
+			end
+		end;
+		OffCommand=function(self)
+			self:diffusealpha(0)
+		end;
     };
 	LoadActor( THEME:GetPathG("","ScreenSelectProfile/"..ddrgame..lang.."_sceawi_player_grade_base") )..{
       InitCommand=cmd(diffusealpha,0;zoom,0.75;y,40);

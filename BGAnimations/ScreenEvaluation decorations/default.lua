@@ -271,7 +271,7 @@ return Def.ActorFrame{
                 local song = GAMESTATE:GetCurrentSong()
                 local course = GAMESTATE:GetCurrentCourse()
                 if song then
-                    s:settext(song:GetDisplayFullTitle()):y(-12)
+                    s:settext(SongName()):y(-12)
                 else
                     s:settext(course:GetDisplayTitle())
                 end
@@ -285,7 +285,7 @@ return Def.ActorFrame{
                 s:maxwidth(350):y(13):zoom(0.7)
                 local song = GAMESTATE:GetCurrentSong()
                 if song then
-                    s:settext(song:GetDisplayArtist())
+                    s:settext(ArtistName())
                 else
                     s:settext("")
                 end

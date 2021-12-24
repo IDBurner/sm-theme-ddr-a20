@@ -36,11 +36,8 @@ for i,v in ipairs(GR) do
                         local tablev = DDR_groove_radar_values[st][song:GetDisplayMainTitle()]
                         Value = tablev[ToEnumShortString(steps:GetDifficulty())][i]
                     else
-                        Value = math.floor(steps:GetRadarValues(pn):GetValue('RadarCategory_'..v[3])*100)
+                        Value = math.floor(steps:GetRadarValues(pn):GetValue('RadarCategory_'..v[3])*100+0.5)
                     end
-					-- local Value = GAMESTATE:GetCurrentSteps(pn):GetRadarValues(pn):GetValue('RadarCategory_'..v[3])
-                    -- local RadarDDRNum = math.floor(Value*100)
-                    -- s:settext(RadarDDRNum)
                     s:settext(Value)
                 else
                     s:settext("0")

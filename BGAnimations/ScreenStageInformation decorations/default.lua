@@ -141,15 +141,15 @@ t[#t+1] = Def.ActorFrame {
 
 
 t[#t+1] = LoadActor(THEME:GetPathB("","/_blue doors/cosh_loading.png"))..{
-	InitCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-105;zoom,1;sleep,1;linear,0.501;zoom,0.9;addy,5;sleep,0.4;linear,0.033;zoomx,3;zoomy,0);
+	InitCommand=function(s) s:x(SCREEN_CENTER_X):y(SCREEN_BOTTOM-105):zoom(1):sleep(1):linear(0.501):zoom(0.9):addy(5):sleep(0.4):linear(0.033):zoomx(1.5):zoomy(0) end,
 };
 
 t[#t+1] = LoadActor(THEME:GetPathB("","/_blue doors/cosh_loading_frame.png"))..{
-	InitCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-70;zoom,1.2;sleep,1;linear,0.501;zoom,1.05;sleep,0.4;linear,0.033;zoomx,3;zoomy,0);
+	InitCommand=function(s) s:x(SCREEN_CENTER_X):y(SCREEN_BOTTOM-70):zoom(1.2):sleep(1):linear(0.501):zoom(1.05):sleep(0.4):linear(0.033):zoomx(1.5):zoomy(0) end,
 };
 
 t[#t+1] = LoadActor(THEME:GetPathB("","/_blue doors/cosh_loading_meter.png"))..{
-	InitCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-70;zoom,1.2;cropright,1;sleep,1;linear,0.501;zoom,1.05;cropright,0;sleep,0.4;linear,0.033;zoomx,3;zoomy,0);
+	InitCommand=function(s) s:x(SCREEN_CENTER_X):y(SCREEN_BOTTOM-70):zoom(1.2):cropright(1):sleep(1):linear(0.501):zoom(1.05):cropright(0):sleep(0.4):linear(0.033):zoomx(1.5):zoomy(0) end,
 };
 
 t[#t+1] = LoadActor("ScoreDisplay");

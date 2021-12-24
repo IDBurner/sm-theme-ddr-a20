@@ -18,7 +18,7 @@ return Def.ActorFrame {
 	Def.Sprite{
 	InitCommand=function(self)
 		self:x(SCREEN_CENTER_X):y(SCREEN_CENTER_Y+10):zoom(1)
-			if ThemePrefs.Get("Version") == "A20" then
+			if version == "A20_" then
 				self:blend(('BlendMode_Add'));
 			end;
 	end;

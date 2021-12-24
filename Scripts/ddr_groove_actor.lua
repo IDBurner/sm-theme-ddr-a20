@@ -42,7 +42,7 @@ local function scale_ddr_radar_to_sm(value)
 	return value / 200
 end
 
-local function lookup_ddr_radar_values(song, steps, pn)
+function lookup_ddr_radar_values(song, steps, pn)
 	local title= ""
 	-- GetMainTitle added in 5.0.10 to bypass the ShowNativeLanguage pref.
 	-- That preference interferes with looking up a song, because it makes
@@ -60,7 +60,7 @@ local function lookup_ddr_radar_values(song, steps, pn)
 	local steps_radar= steps:GetRadarValues(pn)
 	for category, index in pairs(radar_category_to_index) do
 		-- Cap radar values at 1 because stepmania doesn't have a cap anymore.
-		radars[index]= math.min(steps_radar:GetValue(category), 1)
+		radars[index]= math.min(steps_radar:GetValue(category), 3)
 	end
 	local radars_for_type= DDR_groove_radar_values[steps:GetStepsType()]
 	if not radars_for_type then

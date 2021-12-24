@@ -17,9 +17,8 @@ t[#t+1] = Def.ActorFrame{
             Font="_arial black 28px",
             InitCommand=function(s) s:zoom(0.9):maxwidth(376):y(-11) end,
             CurrentSongChangedMessageCommand=function(s)
-                local song = GAMESTATE:GetCurrentSong()
-                if song then
-                    s:settext(song:GetDisplayFullTitle())
+                if GAMESTATE:GetCurrentSong() then
+                    s:settext(GAMESTATE:GetCurrentSong():GetDisplayFullTitle())
                 end
             end,
         };
@@ -28,9 +27,8 @@ t[#t+1] = Def.ActorFrame{
             Font="_arial black 28px",
             InitCommand=function(s) s:zoom(0.7):maxwidth(456):y(17) end,
             CurrentSongChangedMessageCommand=function(s)
-                local song = GAMESTATE:GetCurrentSong()
-                if song then
-                    s:settext(song:GetDisplayArtist())
+                if GAMESTATE:GetCurrentSong() then
+                    s:settext(ArtistName())
                 end
             end,
         }

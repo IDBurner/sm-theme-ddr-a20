@@ -9,8 +9,6 @@ local x = Def.ActorFrame{
 
 };
 
-local regionPath = "/Themes/"
-
 function LoadPlayerStuff(Player)
 	
 	local t = {};
@@ -165,7 +163,7 @@ function LoadPlayerStuff(Player)
         self:diffusealpha(0)
       end;
     };
-	t[#t+1] = LoadActor(regionPath.."Region.lua")..{
+	t[#t+1] = LoadActor(RegionFile())..{
       InitCommand=cmd(diffusealpha,0;zoom,1;x,135;y,-87);
       OnCommand=function(self)
           self:sleep(0.7):linear(0.1):diffusealpha(1):zoom(1.1):linear(0.1):zoom(1)
