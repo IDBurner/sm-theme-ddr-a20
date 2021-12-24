@@ -9,6 +9,7 @@
 2) Crash passing ScreenMenu
 3) ScreenSelectMusic BGM 
 4) It won't be necessary change the theme folder's name
+5) Region file won't be necessary. But, if you want it, follow the instructions.
 
 
 (ESPAÑOL)
@@ -16,6 +17,7 @@
 2) Crash pasando la pantalla del menú
 3) Música de fondo del ScreenSelectMusic
 4) No es necesario cambiar el nombre del folder del tema
+5) Archivo Region no será necesario. Pero si lo quieres, sigue las instrucciones.
 
 
 # ENGLISH
@@ -29,8 +31,6 @@ Hey you guys! This is Curilang now in Github, please follow the instructions and
 1) Change your region in the file "Region.lua", this file has to be in Themes folder, not inside the theme.
 
 https://github.com/Curilang/Region.lua
-
-Please download the Region.lua file, with it the theme won't work!
 
 2) VERY IMPORTANT!, Configure your buttons, specially "MenuLeft, MenuRight, MenuUp, MenuDown". This is for use the
    correct buttons in the theme.
@@ -54,8 +54,6 @@ Qué tal chicos! Curilang aquí ahora en Github, por favor sigue las instruccion
 1) Cambia tu región en el archivo "Region.lua", este archivo debe estar en la carpeta Themes, no dentro del tema.
 
 https://github.com/Curilang/Region.lua
-
-Por favor descarga el archivo Region.lua, sin él el tema no va a funcionar.
 
 2) MUY IMPORTANTE! Configura tus botones, especialmente "MenuIzquierda, MenuDerecha, MenuArriba, MenuAbajo". Esto es
    para que el tema funcione con los controles correctos.
@@ -109,6 +107,8 @@ Por favor descarga el archivo Region.lua, sin él el tema no va a funcionar.
 • 17 - DDR A20
 
 • 18 - DDR A20 PLUS
+
+• DDR GRAND PRIX
 
 # NOTES / NOTAS
 
